@@ -21,7 +21,7 @@ class ThingViewModel {
         self.id = thing.id
         self.title = thing.title
         self.author = thing.author
-        self.entryDate = "yesterday" // TODO: convert to 'X ago' format
+        self.entryDate = thing.entryDate.timeAgo()
         self.commentsNumber = "\(thing.commentsNumber)"
     }
 }
