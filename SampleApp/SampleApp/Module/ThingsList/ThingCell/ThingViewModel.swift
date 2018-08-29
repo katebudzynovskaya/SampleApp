@@ -22,6 +22,6 @@ class ThingViewModel {
         self.title = thing.title
         self.author = thing.author
         self.entryDate = thing.entryDate.timeAgo()
-        self.commentsNumber = "\(thing.commentsNumber)"
+        self.commentsNumber = thing.commentsNumber.shortendFormat()
     }
 }
