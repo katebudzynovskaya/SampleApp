@@ -16,13 +16,27 @@ class ThingsListViewController: UITableViewController {
         
         super.init(coder: aDecoder)
         
-        self.viewModel = ThingsListViewModel()
+        let service = APIServiceProvider()
+        self.viewModel = ThingsListViewModel(service: service)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        bind()
+        self.viewModel.load()
     }
 
+    func bind() {
+        
+        self.viewModel.didUpdate = { [weak self] _ in
+            self?.tableView.reloadData()
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.things.count
     }

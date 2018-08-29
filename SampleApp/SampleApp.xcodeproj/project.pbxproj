@@ -18,6 +18,8 @@
 		44AD7FB721370FD3004DDBE2 /* ThingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FB621370FD3004DDBE2 /* ThingTableViewCell.swift */; };
 		44AD7FB921371040004DDBE2 /* ThingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FB821371040004DDBE2 /* ThingViewModel.swift */; };
 		44AD7FBB21371056004DDBE2 /* ThingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FBA21371056004DDBE2 /* ThingsListViewModel.swift */; };
+		44AD7FBE21371A65004DDBE2 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FBD21371A65004DDBE2 /* APIService.swift */; };
+		44AD7FC021371AF4004DDBE2 /* APIServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FBF21371AF4004DDBE2 /* APIServiceProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		44AD7FB621370FD3004DDBE2 /* ThingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingTableViewCell.swift; sourceTree = "<group>"; };
 		44AD7FB821371040004DDBE2 /* ThingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingViewModel.swift; sourceTree = "<group>"; };
 		44AD7FBA21371056004DDBE2 /* ThingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsListViewModel.swift; sourceTree = "<group>"; };
+		44AD7FBD21371A65004DDBE2 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		44AD7FBF21371AF4004DDBE2 /* APIServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		44AD7F8121370A0A004DDBE2 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				44AD7FBC21371A4F004DDBE2 /* Service */,
 				44AD7FB321370EE3004DDBE2 /* Module */,
 				44AD7FB021370C07004DDBE2 /* Model */,
 				44AD7F8221370A0A004DDBE2 /* AppDelegate.swift */,
@@ -167,6 +172,15 @@
 				44AD7FB821371040004DDBE2 /* ThingViewModel.swift */,
 			);
 			path = ThingCell;
+			sourceTree = "<group>";
+		};
+		44AD7FBC21371A4F004DDBE2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				44AD7FBD21371A65004DDBE2 /* APIService.swift */,
+				44AD7FBF21371AF4004DDBE2 /* APIServiceProvider.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AD7FB721370FD3004DDBE2 /* ThingTableViewCell.swift in Sources */,
+				44AD7FC021371AF4004DDBE2 /* APIServiceProvider.swift in Sources */,
+				44AD7FBE21371A65004DDBE2 /* APIService.swift in Sources */,
 				44AD7F8521370A0A004DDBE2 /* ThingsListViewController.swift in Sources */,
 				44AD7FB221370C8C004DDBE2 /* Thing.swift in Sources */,
 				44AD7F8321370A0A004DDBE2 /* AppDelegate.swift in Sources */,

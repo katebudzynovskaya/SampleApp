@@ -11,4 +11,36 @@ import Foundation
 class ThingsListViewModel {
     
     var things = [ThingViewModel]()
+    var service: APIService
+    var didUpdate: ((ThingsListViewModel) -> Void)?
+    
+    init(service: APIService) {
+        
+        self.service = service
+    }
+    
+    func load() {
+        
+        let url = "https://www.reddit.com/top.json?raw_json=1" // TODO: construct url
+        
+        self.service.executeRequest(url: url, parameters: [:], success: { [weak self] (jsonDictionary) in
+            
+            guard let `self` = self else { return }
+            
+            let children = jsonDictionary["children"] as! [Dictionary<String, Any>]
+            let things = children.flatMap{ (dictionary: Dictionary<String, Any>) in
+                return Thing.init(dictionary: dictionary["data"] as! Dictionary<String, Any>)
+            }
+            
+            self.things = things.map{ thing in return ThingViewModel.init(thing: thing)}
+            
+            DispatchQueue.main.async {
+                self.didUpdate?(self)
+            }
+            
+        }) { (error) in
+            // TODO: hanlde error
+        }
+        
+    }
 }
