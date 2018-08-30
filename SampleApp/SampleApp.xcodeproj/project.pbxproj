@@ -24,6 +24,8 @@
 		44AD7FC521372882004DDBE2 /* DateTimeAgoFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FC421372882004DDBE2 /* DateTimeAgoFormattingTests.swift */; };
 		44AD7FC72137346E004DDBE2 /* Int+ShortendFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FC62137346E004DDBE2 /* Int+ShortendFormat.swift */; };
 		44AD7FC9213736D9004DDBE2 /* IntFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FC8213736D9004DDBE2 /* IntFormattingTests.swift */; };
+		44AD7FCD21385AC3004DDBE2 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FCC21385AC3004DDBE2 /* URLBuilder.swift */; };
+		44AD7FCF21385C6E004DDBE2 /* URLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FCE21385C6E004DDBE2 /* URLBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		44AD7FC421372882004DDBE2 /* DateTimeAgoFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeAgoFormattingTests.swift; sourceTree = "<group>"; };
 		44AD7FC62137346E004DDBE2 /* Int+ShortendFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ShortendFormat.swift"; sourceTree = "<group>"; };
 		44AD7FC8213736D9004DDBE2 /* IntFormattingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFormattingTests.swift; sourceTree = "<group>"; };
+		44AD7FCC21385AC3004DDBE2 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		44AD7FCE21385C6E004DDBE2 /* URLBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 				44AD7F9921370A0A004DDBE2 /* Info.plist */,
 				44AD7FC421372882004DDBE2 /* DateTimeAgoFormattingTests.swift */,
 				44AD7FC8213736D9004DDBE2 /* IntFormattingTests.swift */,
+				44AD7FCE21385C6E004DDBE2 /* URLBuilderTests.swift */,
 			);
 			path = SampleAppTests;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			children = (
 				44AD7FC221372451004DDBE2 /* Date+Extension.swift */,
 				44AD7FC62137346E004DDBE2 /* Int+ShortendFormat.swift */,
+				44AD7FCC21385AC3004DDBE2 /* URLBuilder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				44AD7FB721370FD3004DDBE2 /* ThingTableViewCell.swift in Sources */,
 				44AD7FC021371AF4004DDBE2 /* APIServiceProvider.swift in Sources */,
 				44AD7FBE21371A65004DDBE2 /* APIService.swift in Sources */,
+				44AD7FCD21385AC3004DDBE2 /* URLBuilder.swift in Sources */,
 				44AD7F8521370A0A004DDBE2 /* ThingsListViewController.swift in Sources */,
 				44AD7FB221370C8C004DDBE2 /* Thing.swift in Sources */,
 				44AD7FC72137346E004DDBE2 /* Int+ShortendFormat.swift in Sources */,
@@ -355,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AD7FC521372882004DDBE2 /* DateTimeAgoFormattingTests.swift in Sources */,
+				44AD7FCF21385C6E004DDBE2 /* URLBuilderTests.swift in Sources */,
 				44AD7FC9213736D9004DDBE2 /* IntFormattingTests.swift in Sources */,
 				44AD7F9821370A0A004DDBE2 /* SampleAppTests.swift in Sources */,
 			);
