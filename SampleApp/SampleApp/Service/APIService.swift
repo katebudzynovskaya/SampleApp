@@ -8,8 +8,15 @@
 
 import Foundation
 
+enum HTTPMethod {
+    case GET
+}
+
+enum Endpoint : String {
+    case Top = "/top.json"
+}
+
 protocol APIService {
     
-    func executeRequest(url: String, parameters: Dictionary<String, String>, success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error) -> Void)
-    
+    func executeRequest(_ method: HTTPMethod, _ endpoint: Endpoint, parameters: Dictionary<String, String>, success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error) -> Void)
 }

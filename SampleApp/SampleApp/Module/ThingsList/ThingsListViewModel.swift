@@ -21,9 +21,7 @@ class ThingsListViewModel {
     
     func load() {
         
-        let url = "https://www.reddit.com/top.json?raw_json=1" // TODO: construct url
-        
-        self.service.executeRequest(url: url, parameters: [:], success: { [weak self] (jsonDictionary) in
+        self.service.executeRequest(.GET, .Top, parameters: ["raw_json": "1"], success: { [weak self] (jsonDictionary) in
             
             guard let `self` = self else { return }
             

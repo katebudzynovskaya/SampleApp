@@ -10,11 +10,23 @@ import Foundation
 
 class APIServiceProvider: APIService {
     
-    func executeRequest(url: String, parameters: Dictionary<String, String> = [:], success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error) -> Void) {
+    let session = URLSession.shared
+    
+    func executeRequest(_ method: HTTPMethod, _ endpoint: Endpoint, parameters: Dictionary<String, String> = [:], success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error) -> Void)
+    {
+        switch method {
+        case .GET:
+            executeGET(endpoint, parameters: parameters, success: success, failure: failure)
+        default:
+            fatalError()
+        }
+    }
+    
+    private func executeGET(_ endpoint: Endpoint, parameters: Dictionary<String, String> = [:], success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error) -> Void)
+    {
+        guard let url = URLBuilder.url(host: "www.reddit.com", endpoint: Endpoint.Top.rawValue, parameters: parameters) else { return }
         
-        guard let url = URL(string: url) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        session.dataTask(with: url) { (data, response, error) in
             
             if let error = error {
                 failure(error)
@@ -33,6 +45,7 @@ class APIServiceProvider: APIService {
             }
             
             
-        }.resume()
+            }.resume()
     }
+
 }
