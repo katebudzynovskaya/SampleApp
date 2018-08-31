@@ -10,24 +10,25 @@ import UIKit
 
 class ThingsListViewController: UITableViewController {
 
-    var viewModel: ThingsListViewModel!
+    var viewModel: ThingsListPagingViewModel!
     
     required init?(coder aDecoder: NSCoder) {
         
         super.init(coder: aDecoder)
         
         let service = APIServiceProvider()
-        self.viewModel = ThingsListViewModel(service: service)
+        self.viewModel = ThingsListPagingViewModel(service: service)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.estimatedRowHeight = 100
+        self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.separatorStyle = .none
         
         bind()
-        self.viewModel.load()
+        self.viewModel.loadPage()
     }
 
     func bind() {
@@ -53,6 +54,11 @@ class ThingsListViewController: UITableViewController {
         cell.commentsNumberLabel.text = thingViewModel.commentsNumber
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        viewModel.loadPageIfNeed(forRow: indexPath.row)
     }
 }
 
