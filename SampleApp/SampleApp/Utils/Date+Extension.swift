@@ -14,6 +14,12 @@ extension Date {
     
     func timeAgo() -> String {
         
+        if !validateDateInPast() {
+            print("Date.timeAgo(): target date is in future")
+            
+            return ""
+        }
+        
         let timeInterval = Date().timeIntervalSince(self)
         
         let rule = formattingRule(timeInterval: timeInterval, ruleset: timeAgoFormattingRules())
@@ -24,7 +30,7 @@ extension Date {
         
     }
     
-    func formattingRule(timeInterval: Double, ruleset: [FormattingRule]) -> FormattingRule {
+    private func formattingRule(timeInterval: Double, ruleset: [FormattingRule]) -> FormattingRule {
         
         var rule = ruleset[0]
         
@@ -38,12 +44,17 @@ extension Date {
         return rule
     }
     
-    func timeAgoFormattingRules() -> [FormattingRule] {
+    private func timeAgoFormattingRules() -> [FormattingRule] {
         
         return [(60 , 1, "s ago"),
                 (60 * 60, 60, "m ago"),
                 (60 * 60 * 24, 60 * 60, "h ago"),
                 (60 * 60 * 24 * 365, 60 * 60 * 24, "d ago"),
                 (60 * 60 * 24 * 365 * 100, 60 * 60 * 24 * 365, "y ago")]
+    }
+    
+    private func validateDateInPast() -> Bool {
+        
+        return self.compare(Date()) == ComparisonResult.orderedAscending
     }
 }

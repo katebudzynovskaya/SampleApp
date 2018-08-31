@@ -97,4 +97,15 @@ class DateTimeAgoFormattingTests: XCTestCase {
         XCTAssertEqual(actual, expected)
     }
     
+    func testTimeAgoForDateInFuture() {
+        
+        let expected = ""
+        
+        let twoHoursTimeInterval: Double = 60 * 60 * 2
+        let twoHoursAheadDate = Date(timeIntervalSince1970: Date().timeIntervalSince1970 + twoHoursTimeInterval)
+        let actual = twoHoursAheadDate.timeAgo()
+        
+        XCTAssertEqual(actual, expected)
+        
+    }
 }
