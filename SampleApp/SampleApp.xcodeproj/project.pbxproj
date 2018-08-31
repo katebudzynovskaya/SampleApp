@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4410AC812139188D00B6C727 /* ThingsListPagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410AC802139188D00B6C727 /* ThingsListPagingViewModel.swift */; };
 		44AD7F8321370A0A004DDBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7F8221370A0A004DDBE2 /* AppDelegate.swift */; };
 		44AD7F8521370A0A004DDBE2 /* ThingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7F8421370A0A004DDBE2 /* ThingsListViewController.swift */; };
 		44AD7F8821370A0A004DDBE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AD7F8621370A0A004DDBE2 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4410AC802139188D00B6C727 /* ThingsListPagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsListPagingViewModel.swift; sourceTree = "<group>"; };
 		44AD7F7F21370A0A004DDBE2 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AD7F8221370A0A004DDBE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44AD7F8421370A0A004DDBE2 /* ThingsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsListViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				44AD7FB521370FC1004DDBE2 /* ThingCell */,
 				44AD7F8421370A0A004DDBE2 /* ThingsListViewController.swift */,
 				44AD7FBA21371056004DDBE2 /* ThingsListViewModel.swift */,
+				4410AC802139188D00B6C727 /* ThingsListPagingViewModel.swift */,
 			);
 			path = ThingsList;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				44AD7FC72137346E004DDBE2 /* Int+ShortendFormat.swift in Sources */,
 				44AD7F8321370A0A004DDBE2 /* AppDelegate.swift in Sources */,
 				44AD7FB921371040004DDBE2 /* ThingViewModel.swift in Sources */,
+				4410AC812139188D00B6C727 /* ThingsListPagingViewModel.swift in Sources */,
 				44AD7FBB21371056004DDBE2 /* ThingsListViewModel.swift in Sources */,
 				44AD7FC321372451004DDBE2 /* Date+Extension.swift in Sources */,
 			);

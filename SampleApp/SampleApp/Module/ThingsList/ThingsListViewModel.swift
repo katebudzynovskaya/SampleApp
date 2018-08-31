@@ -19,7 +19,7 @@ class ThingsListViewModel {
         self.service = service
     }
     
-    func load() {
+    func loadPage() {
         
         self.service.executeRequest(.GET, .Top, parameters: ["raw_json": "1"], success: { [weak self] (jsonDictionary) in
             
