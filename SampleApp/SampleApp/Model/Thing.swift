@@ -21,7 +21,7 @@ class Thing {
         guard let id = dictionary["id"] as? String,
             let title = dictionary["title"] as? String,
             let author = dictionary["author"] as? String,
-            let entryTimestamp = dictionary["created"] as? Double,
+            let entryTimestamp = dictionary["created_utc"] as? Double,
             let commentsNumber = dictionary["num_comments"] as? Int else {
                 return nil
         }
