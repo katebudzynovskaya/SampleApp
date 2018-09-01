@@ -17,7 +17,8 @@ class ThingsListViewController: UITableViewController {
         super.init(coder: aDecoder)
         
         let service = APIServiceProvider()
-        self.viewModel = ThingsListPagingViewModel(service: service)
+        let imageCache = ImageCacheService(service: service)
+        self.viewModel = ThingsListPagingViewModel(service: service, cache: imageCache)
     }
     
     override func viewDidLoad() {
@@ -48,10 +49,7 @@ class ThingsListViewController: UITableViewController {
         
         let thingViewModel = self.viewModel.things[indexPath.row]
         
-        cell.titleLalel.text = thingViewModel.title
-        cell.authorLabel.text = thingViewModel.author
-        cell.dateLabel.text = thingViewModel.entryDate
-        cell.commentsNumberLabel.text = thingViewModel.commentsNumber
+        cell.setup(viewModel: thingViewModel)
         
         return cell
     }

@@ -35,7 +35,7 @@ class ThingsListPagingViewModel: ThingsListViewModel {
                 return Thing.init(dictionary: dictionary["data"] as! Dictionary<String, Any>)
             }
             
-            let newThings = things.map{ thing in return ThingViewModel.init(thing: thing) }
+            let newThings = things.map{ thing in return ThingViewModel.init(thing: thing, cache: self.imageCache) }
             
             self.things.append(contentsOf: newThings)
             

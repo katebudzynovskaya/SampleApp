@@ -12,11 +12,14 @@ class ThingsListViewModel {
     
     var things = [ThingViewModel]()
     var service: APIService
+    var imageCache: ImageCache
+    
     var didUpdate: ((ThingsListViewModel) -> Void)?
     
-    init(service: APIService) {
+    init(service: APIService, cache: ImageCache) {
         
         self.service = service
+        self.imageCache = cache
     }
     
     func loadPage() {
@@ -30,7 +33,7 @@ class ThingsListViewModel {
                 return Thing.init(dictionary: dictionary["data"] as! Dictionary<String, Any>)
             }
             
-            self.things = things.map{ thing in return ThingViewModel.init(thing: thing)}
+            self.things = things.map{ thing in return ThingViewModel.init(thing: thing, cache: self.imageCache)}
             
             DispatchQueue.main.async {
                 self.didUpdate?(self)
