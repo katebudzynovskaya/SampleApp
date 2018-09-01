@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44006829213A71DF00D798B5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44006828213A71DF00D798B5 /* Image.swift */; };
+		4400682B213A737D00D798B5 /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4400682A213A737D00D798B5 /* URLValidator.swift */; };
+		4400682D213A749C00D798B5 /* URLValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4400682C213A749C00D798B5 /* URLValidatorTests.swift */; };
 		4410AC812139188D00B6C727 /* ThingsListPagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410AC802139188D00B6C727 /* ThingsListPagingViewModel.swift */; };
 		44AD7F8321370A0A004DDBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7F8221370A0A004DDBE2 /* AppDelegate.swift */; };
 		44AD7F8521370A0A004DDBE2 /* ThingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7F8421370A0A004DDBE2 /* ThingsListViewController.swift */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44006828213A71DF00D798B5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		4400682A213A737D00D798B5 /* URLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
+		4400682C213A749C00D798B5 /* URLValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidatorTests.swift; sourceTree = "<group>"; };
 		4410AC802139188D00B6C727 /* ThingsListPagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsListPagingViewModel.swift; sourceTree = "<group>"; };
 		44AD7F7F21370A0A004DDBE2 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AD7F8221370A0A004DDBE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 				44AD7FC421372882004DDBE2 /* DateTimeAgoFormattingTests.swift */,
 				44AD7FC8213736D9004DDBE2 /* IntFormattingTests.swift */,
 				44AD7FCE21385C6E004DDBE2 /* URLBuilderTests.swift */,
+				4400682C213A749C00D798B5 /* URLValidatorTests.swift */,
 			);
 			path = SampleAppTests;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				44AD7FB121370C8C004DDBE2 /* Thing.swift */,
+				44006828213A71DF00D798B5 /* Image.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +216,7 @@
 				44AD7FC221372451004DDBE2 /* Date+Extension.swift */,
 				44AD7FC62137346E004DDBE2 /* Int+ShortendFormat.swift */,
 				44AD7FCC21385AC3004DDBE2 /* URLBuilder.swift */,
+				4400682A213A737D00D798B5 /* URLValidator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -352,11 +361,13 @@
 				44AD7FCD21385AC3004DDBE2 /* URLBuilder.swift in Sources */,
 				44AD7F8521370A0A004DDBE2 /* ThingsListViewController.swift in Sources */,
 				44AD7FB221370C8C004DDBE2 /* Thing.swift in Sources */,
+				44006829213A71DF00D798B5 /* Image.swift in Sources */,
 				44AD7FC72137346E004DDBE2 /* Int+ShortendFormat.swift in Sources */,
 				44AD7F8321370A0A004DDBE2 /* AppDelegate.swift in Sources */,
 				44AD7FB921371040004DDBE2 /* ThingViewModel.swift in Sources */,
 				4410AC812139188D00B6C727 /* ThingsListPagingViewModel.swift in Sources */,
 				44AD7FBB21371056004DDBE2 /* ThingsListViewModel.swift in Sources */,
+				4400682B213A737D00D798B5 /* URLValidator.swift in Sources */,
 				44AD7FC321372451004DDBE2 /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4400682D213A749C00D798B5 /* URLValidatorTests.swift in Sources */,
 				44AD7FC521372882004DDBE2 /* DateTimeAgoFormattingTests.swift in Sources */,
 				44AD7FCF21385C6E004DDBE2 /* URLBuilderTests.swift in Sources */,
 				44AD7FC9213736D9004DDBE2 /* IntFormattingTests.swift in Sources */,

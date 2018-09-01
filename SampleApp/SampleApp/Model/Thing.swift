@@ -16,6 +16,8 @@ class Thing {
     var entryDate: Date!
     var commentsNumber: Int!
     
+    var thumbnail: Thumbnail?
+    
     init?(dictionary: Dictionary<String, Any>) {
         
         guard let id = dictionary["id"] as? String,
@@ -31,5 +33,7 @@ class Thing {
         self.author = author
         self.entryDate = Date(timeIntervalSince1970: entryTimestamp)
         self.commentsNumber = commentsNumber
+        
+        self.thumbnail = Thumbnail(dictionary: dictionary)
     }
 }
