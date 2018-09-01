@@ -18,6 +18,8 @@
 		4400683F213A888F00D798B5 /* mock.png in Resources */ = {isa = PBXBuildFile; fileRef = 4400683E213A888F00D798B5 /* mock.png */; };
 		44006841213A8C0800D798B5 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 44006840213A8C0800D798B5 /* placeholder.png */; };
 		44006843213A993E00D798B5 /* donwloaded_mock.png in Resources */ = {isa = PBXBuildFile; fileRef = 44006842213A993E00D798B5 /* donwloaded_mock.png */; };
+		44006846213A9C5E00D798B5 /* UIImage+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44006845213A9C5E00D798B5 /* UIImage+Placeholder.swift */; };
+		44006849213A9F3B00D798B5 /* LoadingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44006848213A9F3B00D798B5 /* LoadingImage.swift */; };
 		4410AC812139188D00B6C727 /* ThingsListPagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410AC802139188D00B6C727 /* ThingsListPagingViewModel.swift */; };
 		44AD7F8321370A0A004DDBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7F8221370A0A004DDBE2 /* AppDelegate.swift */; };
 		44AD7F8521370A0A004DDBE2 /* ThingsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7F8421370A0A004DDBE2 /* ThingsListViewController.swift */; };
@@ -69,6 +71,8 @@
 		4400683E213A888F00D798B5 /* mock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mock.png; sourceTree = "<group>"; };
 		44006840213A8C0800D798B5 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		44006842213A993E00D798B5 /* donwloaded_mock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donwloaded_mock.png; sourceTree = "<group>"; };
+		44006845213A9C5E00D798B5 /* UIImage+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Placeholder.swift"; sourceTree = "<group>"; };
+		44006848213A9F3B00D798B5 /* LoadingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImage.swift; sourceTree = "<group>"; };
 		4410AC802139188D00B6C727 /* ThingsListPagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsListPagingViewModel.swift; sourceTree = "<group>"; };
 		44AD7F7F21370A0A004DDBE2 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AD7F8221370A0A004DDBE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,14 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		44006844213A9C2900D798B5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				44006848213A9F3B00D798B5 /* LoadingImage.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		44AD7F7621370A0A004DDBE2 = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +184,9 @@
 				44AD7FB321370EE3004DDBE2 /* Module */,
 				44AD7FB021370C07004DDBE2 /* Model */,
 				44AD7FC121372409004DDBE2 /* Utils */,
-				44AD7F8621370A0A004DDBE2 /* Main.storyboard */,
+				44006844213A9C2900D798B5 /* Helper */,
 				44AD7F8921370A0A004DDBE2 /* Assets.xcassets */,
+				44AD7F8621370A0A004DDBE2 /* Main.storyboard */,
 				44AD7F8B21370A0A004DDBE2 /* LaunchScreen.storyboard */,
 				44AD7F8E21370A0A004DDBE2 /* Info.plist */,
 			);
@@ -257,6 +270,7 @@
 				44AD7FC62137346E004DDBE2 /* Int+ShortendFormat.swift */,
 				44AD7FCC21385AC3004DDBE2 /* URLBuilder.swift */,
 				4400682A213A737D00D798B5 /* URLValidator.swift */,
+				44006845213A9C5E00D798B5 /* UIImage+Placeholder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -401,6 +415,7 @@
 				44006830213A761F00D798B5 /* ImageCache.swift in Sources */,
 				44AD7FB721370FD3004DDBE2 /* ThingTableViewCell.swift in Sources */,
 				44AD7FC021371AF4004DDBE2 /* APIServiceProvider.swift in Sources */,
+				44006846213A9C5E00D798B5 /* UIImage+Placeholder.swift in Sources */,
 				44AD7FBE21371A65004DDBE2 /* APIService.swift in Sources */,
 				44AD7FCD21385AC3004DDBE2 /* URLBuilder.swift in Sources */,
 				44AD7F8521370A0A004DDBE2 /* ThingsListViewController.swift in Sources */,
@@ -413,6 +428,7 @@
 				4410AC812139188D00B6C727 /* ThingsListPagingViewModel.swift in Sources */,
 				44AD7FBB21371056004DDBE2 /* ThingsListViewModel.swift in Sources */,
 				4400682B213A737D00D798B5 /* URLValidator.swift in Sources */,
+				44006849213A9F3B00D798B5 /* LoadingImage.swift in Sources */,
 				44AD7FC321372451004DDBE2 /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
