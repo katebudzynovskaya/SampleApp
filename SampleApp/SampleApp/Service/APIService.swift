@@ -19,4 +19,6 @@ enum Endpoint : String {
 protocol APIService {
     
     func executeRequest(_ method: HTTPMethod, _ endpoint: Endpoint, parameters: Dictionary<String, String>, success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error) -> Void)
+    
+    func executeRequest(url: String, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) 
 }

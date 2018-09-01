@@ -17,9 +17,24 @@ class APIServiceProvider: APIService {
         switch method {
         case .GET:
             executeGET(endpoint, parameters: parameters, success: success, failure: failure)
-        default:
-            fatalError()
         }
+    }
+    
+    func executeRequest(url: String, success: @escaping (Data) -> Void, failure: @escaping (Error) -> Void) {
+        
+        guard let url = URL(string: url) else { return }
+        
+        session.dataTask(with: url) { (data, response, error) in
+            
+            if let error = error {
+                DispatchQueue.main.async { failure(error) }
+            }
+            
+            if let data = data {
+                DispatchQueue.main.sync { success(data) }
+            }
+            
+        }.resume()
     }
     
     private func executeGET(_ endpoint: Endpoint, parameters: Dictionary<String, String> = [:], success: @escaping (Dictionary<String, Any>) -> Void, failure: @escaping (Error) -> Void)
@@ -44,8 +59,7 @@ class APIServiceProvider: APIService {
                 // TODO: handle error
             }
             
-            
-            }.resume()
+        }.resume()
     }
 
 }
