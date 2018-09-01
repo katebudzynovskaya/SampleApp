@@ -26,7 +26,8 @@ class LoadingImage {
     
     var image: UIImage {
     
-        let placeholder = UIImage.placeholder(size: self.model.originalSize, color: UIColor.lightGray)
+        let logo = UIImage(named: "logo")
+        let placeholder = UIImage.placeholder(size: self.model.originalSize, color: UIColor.lightGray, logo: logo)
         return self.cache.cachedImage(url: self.model.url, placeholder: placeholder)
     }
     
