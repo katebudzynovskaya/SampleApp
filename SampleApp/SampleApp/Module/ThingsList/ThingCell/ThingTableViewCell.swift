@@ -40,7 +40,7 @@ class ThingTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        self.viewModel.thumbnail?.didDownload = nil
+        self.viewModel.reset()
     }
 }
 

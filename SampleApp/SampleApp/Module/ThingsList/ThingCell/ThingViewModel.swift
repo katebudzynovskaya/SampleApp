@@ -30,4 +30,10 @@ class ThingViewModel {
             self.thumbnail = LoadingImage(image: thumbnail, cache: cache)
         }
     }
+    
+    func reset() {
+        
+        self.thumbnail?.didDownload = nil
+        self.thumbnail?.state = .ready
+    }
 }
