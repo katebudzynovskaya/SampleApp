@@ -17,6 +17,7 @@ class Thing {
     var commentsNumber: Int!
     
     var thumbnail: Thumbnail?
+    var sourceImage: SourceImage?
     
     init?(dictionary: Dictionary<String, Any>) {
         
@@ -35,5 +36,6 @@ class Thing {
         self.commentsNumber = commentsNumber
         
         self.thumbnail = Thumbnail(dictionary: dictionary)
+        self.sourceImage = SourceImage(dictionary: dictionary)
     }
 }
