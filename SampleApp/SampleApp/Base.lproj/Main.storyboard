@@ -99,5 +99,51 @@
             </objects>
             <point key="canvasLocation" x="791.20000000000005" y="134.48275862068968"/>
         </scene>
+        <!--Thing Preview View Controller-->
+        <scene sceneID="4jg-q1-co8">
+            <objects>
+                <viewController storyboardIdentifier="ThingPreviewViewController" id="hXL-zG-PJc" customClass="ThingPreviewViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gnL-4r-Me1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1L1-mD-sli">
+                                <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0t-3Y-fbd">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XAs-wg-kyM"/>
+                                    <constraint firstAttribute="width" constant="50" id="jbh-ur-5go"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="hXL-zG-PJc" eventType="touchUpInside" id="N8p-cW-bb4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G0t-3Y-fbd" firstAttribute="top" secondItem="gnL-4r-Me1" secondAttribute="top" id="Aig-5b-aBd"/>
+                            <constraint firstItem="1L1-mD-sli" firstAttribute="top" secondItem="84g-36-Iu5" secondAttribute="top" constant="30" id="VBG-5g-Qbl"/>
+                            <constraint firstItem="G0t-3Y-fbd" firstAttribute="leading" secondItem="84g-36-Iu5" secondAttribute="leading" id="hvQ-3O-79h"/>
+                            <constraint firstItem="1L1-mD-sli" firstAttribute="trailing" secondItem="84g-36-Iu5" secondAttribute="trailing" id="iNS-10-X3T"/>
+                            <constraint firstItem="1L1-mD-sli" firstAttribute="leading" secondItem="84g-36-Iu5" secondAttribute="leading" id="pCQ-sU-HTq"/>
+                            <constraint firstItem="84g-36-Iu5" firstAttribute="bottom" secondItem="1L1-mD-sli" secondAttribute="bottom" constant="50" id="tAa-nq-OtB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="84g-36-Iu5"/>
+                    </view>
+                    <connections>
+                        <outlet property="preview" destination="1L1-mD-sli" id="I6v-ok-9GE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlf-IY-nkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527.2" y="135.38230884557723"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="close" width="40" height="40"/>
+    </resources>
 </document>
