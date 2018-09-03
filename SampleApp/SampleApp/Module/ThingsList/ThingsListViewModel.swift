@@ -40,7 +40,7 @@ class ThingsListViewModel {
             }
             
         }) { (error) in
-            // TODO: hanlde error
+            print(error.localizedDescription)
         }
         
     }

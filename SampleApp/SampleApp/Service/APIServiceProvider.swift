@@ -56,7 +56,7 @@ class APIServiceProvider: APIService {
                 success(jsonDictionary)
                 
             } else {
-                // TODO: handle error
+                failure(APIError.SerializationError("API response cannot be serialized"))
             }
             
         }.resume()
