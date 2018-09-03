@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Things List View Controller-->
+        <!--Things-->
         <scene sceneID="GXt-30-Ozq">
             <objects>
-                <tableViewController id="PMw-oH-C5n" customClass="ThingsListViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Things" id="PMw-oH-C5n" customClass="ThingsListViewController" customModule="SampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sNj-cY-UMG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,8 +62,9 @@
                                         </label>
                                         <imageView clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCd-Kn-SGq">
                                             <rect key="frame" x="5" y="45" width="365" height="20"/>
-                                            <accessibility key="accessibilityConfiguration">
+                                            <accessibility key="accessibilityConfiguration" identifier="things.thumbnail">
                                                 <accessibilityTraits key="traits" image="YES" summaryElement="YES"/>
+                                                <bool key="isElement" value="YES"/>
                                             </accessibility>
                                             <gestureRecognizers/>
                                         </imageView>
@@ -86,6 +87,9 @@
                                         <constraint firstAttribute="bottom" secondItem="ybQ-QN-uGV" secondAttribute="bottom" constant="9.5" id="yyK-0T-SIw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="thing.cell" label="thing.cell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <viewLayoutGuide key="safeArea" id="EdY-kY-PPI"/>
                                 <connections>
                                     <outlet property="authorLabel" destination="CXL-vM-lJb" id="Qck-2h-O1N"/>
@@ -116,6 +120,9 @@
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1L1-mD-sli">
                                 <rect key="frame" x="0.0" y="50" width="375" height="567"/>
+                                <accessibility key="accessibilityConfiguration" identifier="thing.source.image">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="V2G-15-YBi" appends="YES" id="zSv-jF-ewW"/>
@@ -135,6 +142,9 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="thing.preview">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="G0t-3Y-fbd" firstAttribute="top" secondItem="84g-36-Iu5" secondAttribute="top" constant="-20" id="Aig-5b-aBd"/>
                             <constraint firstItem="1L1-mD-sli" firstAttribute="top" secondItem="84g-36-Iu5" secondAttribute="top" constant="30" id="VBG-5g-Qbl"/>

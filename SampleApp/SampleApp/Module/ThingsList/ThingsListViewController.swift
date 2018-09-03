@@ -27,6 +27,7 @@ class ThingsListViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 70
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.separatorStyle = .none
+        self.tableView.accessibilityIdentifier = "things.list"
         
         bind()
         self.viewModel.loadPage()
@@ -46,6 +47,7 @@ class ThingsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ThingTableViewCell", for: indexPath) as! ThingTableViewCell
+        cell.accessibilityIdentifier = String(indexPath.row)
         
         let thingViewModel = self.viewModel.things[indexPath.row]
         

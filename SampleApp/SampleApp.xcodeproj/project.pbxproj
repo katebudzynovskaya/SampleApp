@@ -44,6 +44,8 @@
 		44AD7FCF21385C6E004DDBE2 /* URLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AD7FCE21385C6E004DDBE2 /* URLBuilderTests.swift */; };
 		44AF836C213D9D6000F0DBD3 /* ThingPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF836B213D9D6000F0DBD3 /* ThingPreviewViewModel.swift */; };
 		44AF836E213D9E1900F0DBD3 /* ThingPreviewViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF836D213D9E1900F0DBD3 /* ThingPreviewViewConroller.swift */; };
+		44AF8372213DCEBE00F0DBD3 /* ThingsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF8371213DCEBE00F0DBD3 /* ThingsListViewControllerTests.swift */; };
+		44AF8374213DCF1200F0DBD3 /* ThingPreviewContollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF8373213DCF1200F0DBD3 /* ThingPreviewContollerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		44AD7FCE21385C6E004DDBE2 /* URLBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilderTests.swift; sourceTree = "<group>"; };
 		44AF836B213D9D6000F0DBD3 /* ThingPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingPreviewViewModel.swift; sourceTree = "<group>"; };
 		44AF836D213D9E1900F0DBD3 /* ThingPreviewViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingPreviewViewConroller.swift; sourceTree = "<group>"; };
+		44AF8371213DCEBE00F0DBD3 /* ThingsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsListViewControllerTests.swift; sourceTree = "<group>"; };
+		44AF8373213DCF1200F0DBD3 /* ThingPreviewContollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingPreviewContollerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,8 @@
 			children = (
 				44AD7FA221370A0B004DDBE2 /* SampleAppUITests.swift */,
 				44AD7FA421370A0B004DDBE2 /* Info.plist */,
+				44AF8371213DCEBE00F0DBD3 /* ThingsListViewControllerTests.swift */,
+				44AF8373213DCF1200F0DBD3 /* ThingPreviewContollerTests.swift */,
 			);
 			path = SampleAppUITests;
 			sourceTree = "<group>";
@@ -476,6 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44AF8374213DCF1200F0DBD3 /* ThingPreviewContollerTests.swift in Sources */,
+				44AF8372213DCEBE00F0DBD3 /* ThingsListViewControllerTests.swift in Sources */,
 				44AD7FA321370A0B004DDBE2 /* SampleAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
