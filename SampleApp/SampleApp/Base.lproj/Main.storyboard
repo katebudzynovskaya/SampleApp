@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nfO-4P-QFu"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ThingTableViewCell" id="MGD-JH-BDe" customClass="ThingTableViewCell" customModule="SampleApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
@@ -85,6 +86,7 @@
                                         <constraint firstAttribute="bottom" secondItem="ybQ-QN-uGV" secondAttribute="bottom" constant="9.5" id="yyK-0T-SIw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <viewLayoutGuide key="safeArea" id="EdY-kY-PPI"/>
                                 <connections>
                                     <outlet property="authorLabel" destination="CXL-vM-lJb" id="Qck-2h-O1N"/>
                                     <outlet property="commentsNumberLabel" destination="ybQ-QN-uGV" id="x1M-uj-kbl"/>
@@ -125,6 +127,7 @@
                                     <constraint firstAttribute="height" constant="50" id="XAs-wg-kyM"/>
                                     <constraint firstAttribute="width" constant="50" id="jbh-ur-5go"/>
                                 </constraints>
+                                <viewLayoutGuide key="safeArea" id="dcN-g0-cii"/>
                                 <state key="normal" image="close"/>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="hXL-zG-PJc" eventType="touchUpInside" id="N8p-cW-bb4"/>
@@ -133,7 +136,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="G0t-3Y-fbd" firstAttribute="top" secondItem="gnL-4r-Me1" secondAttribute="top" id="Aig-5b-aBd"/>
+                            <constraint firstItem="G0t-3Y-fbd" firstAttribute="top" secondItem="84g-36-Iu5" secondAttribute="top" constant="-20" id="Aig-5b-aBd"/>
                             <constraint firstItem="1L1-mD-sli" firstAttribute="top" secondItem="84g-36-Iu5" secondAttribute="top" constant="30" id="VBG-5g-Qbl"/>
                             <constraint firstItem="G0t-3Y-fbd" firstAttribute="leading" secondItem="84g-36-Iu5" secondAttribute="leading" id="hvQ-3O-79h"/>
                             <constraint firstItem="1L1-mD-sli" firstAttribute="trailing" secondItem="84g-36-Iu5" secondAttribute="trailing" id="iNS-10-X3T"/>
