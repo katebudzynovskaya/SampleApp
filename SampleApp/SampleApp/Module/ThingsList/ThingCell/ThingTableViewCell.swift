@@ -17,7 +17,19 @@ class ThingTableViewCell: UITableViewCell {
     @IBOutlet weak var commentsNumberLabel: UILabel!
     @IBOutlet weak var thumbnail: UIImageView!
 
+    var thumbnailDidPress: ((ThingViewModel) -> Void)?
+    
     var viewModel: ThingViewModel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.selectionStyle = .none
+        
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(thumbnailTapped(_:)))
+        tap.delegate = self
+        thumbnail.addGestureRecognizer(tap)
+    }
     
     func setup(viewModel: ThingViewModel) {
         
@@ -40,7 +52,13 @@ class ThingTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        self.thumbnailDidPress = nil
         self.viewModel.reset()
+    }
+    
+    @objc func thumbnailTapped(_: Any) {
+        
+        self.thumbnailDidPress?(self.viewModel)
     }
 }
 

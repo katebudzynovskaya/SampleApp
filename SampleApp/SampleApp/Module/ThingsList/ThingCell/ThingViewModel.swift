@@ -15,11 +15,13 @@ class ThingViewModel {
     var author: String
     var entryDate: String
     var commentsNumber: String
+    let thing: Thing
     
     var thumbnail: LoadingImage?
     
     init(thing: Thing, cache: ImageCache) {
         
+        self.thing = thing
         self.id = thing.id
         self.title = thing.title
         self.author = thing.author

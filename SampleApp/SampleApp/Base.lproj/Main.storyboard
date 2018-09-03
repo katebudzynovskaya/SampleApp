@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,6 +61,10 @@
                                         </label>
                                         <imageView clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCd-Kn-SGq">
                                             <rect key="frame" x="5" y="45" width="365" height="20"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" image="YES" summaryElement="YES"/>
+                                            </accessibility>
+                                            <gestureRecognizers/>
                                         </imageView>
                                     </subviews>
                                     <constraints>

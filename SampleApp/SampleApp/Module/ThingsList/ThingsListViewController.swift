@@ -50,6 +50,10 @@ class ThingsListViewController: UITableViewController {
         let thingViewModel = self.viewModel.things[indexPath.row]
         
         cell.setup(viewModel: thingViewModel)
+        cell.thumbnailDidPress = { [weak self] (viewModel: ThingViewModel) in
+            
+            self?.showPreview(viewModel: viewModel)
+        }
         
         return cell
     }
@@ -57,6 +61,19 @@ class ThingsListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         viewModel.loadPageIfNeed(forRow: indexPath.row)
+    }
+}
+
+extension ThingsListViewController {
+    
+    func showPreview(viewModel: ThingViewModel) {
+        let previewViewController = storyboard?.instantiateViewController(withIdentifier: "ThingPreviewViewController") as? ThingPreviewViewController
+        
+        guard let preview = previewViewController else { return }
+        preview.viewModel = ThingPreviewViewModel(thing: viewModel.thing, cache: self.viewModel.imageCache)
+        
+        present(preview, animated: true) {}
+        
     }
 }
 
